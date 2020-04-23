@@ -9,6 +9,7 @@ metadata:
     io.kompose.service: conductor-server
   name: conductor-server
 spec:
+  type: ClusterIP
   ports:
   - name: "8080"
     port: 8080

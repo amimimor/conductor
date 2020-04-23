@@ -28,7 +28,7 @@ spec:
       - env:
         - name: WF_SERVER
           value: http://conductor-server:8080/api/
-        image: conductor:ui
+        image: amimimor/conductor:ui
         imagePullPolicy: ""
         name: conductor-ui
         ports:

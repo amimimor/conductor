@@ -1,4 +1,4 @@
-version: '2.3'
+version: '3'
 
 services:
   conductor-server:
@@ -16,9 +16,9 @@ services:
       - elasticsearch:es
       - dynomite:dyno1
     depends_on:
-      elasticsearch:
+    - elasticsearch:
         condition: service_healthy
-      dynomite:
+    - dynomite:
         condition: service_healthy
     logging:
       driver: "json-file"

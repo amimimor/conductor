@@ -28,7 +28,7 @@ spec:
       - env:
         - name: CONFIG_PROP
           value: config-redis.properties
-          image: a10harmony/conductor-server:hcc-build-wednesday
+        image: amimimor/conductor:server 
         imagePullPolicy: ""
         name: conductor-server
         volumeMounts:

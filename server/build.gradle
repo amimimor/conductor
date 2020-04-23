@@ -74,6 +74,7 @@ gretty {
     port = 8080
     // More properties can be found here:
     // http://akhikhl.github.io/gretty-doc/Gretty-configuration.html
+    jvmArgs = ["-Xms1024m", "-Xmx1024m", "-server"]
 }
 configurations.grettyRunnerTomcat8 {
     exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
