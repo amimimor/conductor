@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: conductor-server
   name: conductor-server
 spec:
-  type: ClusterIP
+  type: LoadBalancer 
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
+    protocol: TCP
   selector:
     io.kompose.service: conductor-server
 status:

@@ -24,6 +24,8 @@ spec:
         io.kompose.network/internal: "true"
         io.kompose.service: conductor-server
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: conductor
       containers:
       - env:
         - name: CONFIG_PROP

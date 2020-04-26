@@ -68,13 +68,14 @@ publishing {
 
 gretty {
     contextPath = '/'
-    servletContainer = 'tomcat8'
+    //servletContainer = 'tomcat8'
+    servletContainer = 'jetty9'
     scanDirs = ['**/src/main/resources/**']
     scanDependencies = true
     port = 8080
     // More properties can be found here:
     // http://akhikhl.github.io/gretty-doc/Gretty-configuration.html
-    jvmArgs = ["-Xms1024m", "-Xmx1024m", "-server"]
+    jvmArgs = ["-Xms6G", "-Xmx6G", "-server"]
 }
 configurations.grettyRunnerTomcat8 {
     exclude group: 'org.slf4j', module: 'log4j-over-slf4j'

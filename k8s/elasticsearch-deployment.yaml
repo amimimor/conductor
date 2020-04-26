@@ -24,6 +24,8 @@ spec:
         io.kompose.network/internal: "true"
         io.kompose.service: elasticsearch
     spec:
+      nodeSelector:
+          doks.digitalocean.com/node-pool: conductor
       containers:
       - env:
         - name: ES_JAVA_OPTS
